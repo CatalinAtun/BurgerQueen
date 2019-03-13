@@ -1,0 +1,9 @@
+.button{
+    color: black;
+    text-align: center;
+    display: block;
+    margin: 2%;
+    padding: 1%;
+    width: 20%;
+    border-radius: 10px;
+}
