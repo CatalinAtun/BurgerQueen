@@ -9,12 +9,9 @@ class App extends Component {
       <div className="App">
         <div className="containerTitle">Burger Queen</div>
         <CustomerName />
-        <div className="containerOrder">
-        <nav>
-          
-        </nav>
-        </div>
+        <div className="containerLeft">
         <Buttons />
+        </div>
       </div>
     );
   }

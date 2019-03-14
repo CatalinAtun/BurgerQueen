@@ -15,7 +15,8 @@ class CustomerName extends Component {
 
     onChange() {
         this.setState({
-            name: this.state.tempName
+            name: this.state.tempName,
+            tempName: ""
         })
     }
 
@@ -29,7 +30,7 @@ class CustomerName extends Component {
         return (
             <div className="container-fluid">
                 <p>Ingrese nombre del cliente</p>
-                <input onChange={this.temporalName}></input>
+                <input onChange={this.temporalName} value={this.state.tempName}></input>
                 <button onClick={this.onChange}>ENVIAR</button>
                 <p>Cliente atendiendo: {this.state.name}</p>
             </div>
