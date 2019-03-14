@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { menu } from "./menu.json"
+import { menu } from "../menu.json"
 import "./Buttons.css"
 
 class Buttons extends Component {
@@ -12,10 +12,12 @@ class Buttons extends Component {
     render() {
         const menu = this.state.menu.map((item) => {
             return (
-                <button className="button">
-                    {item.item}
-                    <div>{item.precio}</div>
-                </button>
+                <div className="container">
+                    <button className="button">
+                        {item.item}
+                        <div>{item.precio}</div>
+                    </button>
+                </div>
             )
         })
         return (

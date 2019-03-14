@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Vintages;
+    src: url(Vintages.ttf);
+}
+
+.containerTitle{
+    font-family: Vintages;
+    font-size: 35px;
+    text-align: center;
+    background-color: grey;
+}
+.container-fluid{
+    color: goldenrod;
+    background-color: grey;
+    text-align: center;
+    padding: 1%
+}
+
+.containerOrder{
+    background-color: rgb(90, 76, 59);
+}
+
+body {
+    background: linear-gradient(
+    to right, 
+    #ff9e2c 0%, 
+    #ff9e2c 50%, 
+    #b6701e 50%, 
+    #b6701e 100%
+    );
+}
+
+.menuButton {
+    border-radius: 10px;
+    align-content: center
+}
