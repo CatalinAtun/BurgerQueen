@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://github.com/CatalinaCampos/SCL007-BurgerQueen",
+  "homepage": "https://burger-queen-34357.firebaseapp.com/",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
@@ -25,5 +25,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "react-test-renderer": "^16.8.4"
+  }
 }
