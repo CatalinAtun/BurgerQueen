@@ -3,17 +3,18 @@ import { menu } from "../menu.json"
 import "./Buttons.css"
 
 class Buttons extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             menu
         }
     }
+
     render() {
         const menu = this.state.menu.map((item) => {
             return (
                 <div>
-                    <button className="button">
+                    <button className="button" onClick={()=>this.props.sendItemsToArr(item)}>
                         {item.item}
                         <div>{item.precio}</div>
                     </button>

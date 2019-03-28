@@ -5,16 +5,36 @@ import CustomerName from './components/CustomerName.js' // nombre del cliente
 import Kitchen from './components/Kitchen.js'
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state =
+    {
+      menuApp: []
+    }
+
+    this.addItemsToArr = this.addItemsToArr.bind(this);
+  }
+
+  addItemsToArr(e){
+    let menu = this.state.menuApp
+    menu.push(e)
+    this.setState({
+      ...this.state, 
+      menuApp: menu
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <div className="containerTitle">Burger Queen</div>
         <CustomerName />
         <div className="divButton"> 
-        <Buttons />
+        <Buttons 
+        sendItemsToArr={this.addItemsToArr}
+        />
         </div>
-        <Kitchen />
-        
+        <Kitchen sendItemsToArrToKitchen={this.state.menuApp} />
       </div>
     );
   }
