@@ -8,8 +8,11 @@ class Kitchen extends Component {
     showOrder() {
         const showOrderConst = this.props.sendItemsToArrToKitchen.map((item) =>{
             return (
-                <p>{item.item} {item.precio}</p>
-            )
+                <div className="order">
+                <div className="itemOrder">{item.item}</div>
+                <div>{item.precio}</div>
+                </div> 
+            ) 
         })
         return showOrderConst
     }
@@ -19,6 +22,7 @@ class Kitchen extends Component {
             <div className="kitchen">
                 <nav className="navOrder"><h4>Pedidos</h4></nav>
                 <nav className="navFood">{this.showOrder()}</nav>
+                <nav className="totalOrder">Total:</nav>
                 <button className="buttonKitchen">Enviar a cocina</button>
             </div>
         );

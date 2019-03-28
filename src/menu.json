@@ -1,21 +1,21 @@
 {"menu": [
     {
-        "item": "Café americano",
+        "item": "Café americano ",
         "precio": 700
     },
 
     {
-        "item": "Café con leche",
+        "item": "Café con leche ",
         "precio": 1000
     },
 
     {
-        "item": "Sandwich jamón y queso",
+        "item": "Sandwich jamón y queso ",
         "precio": 1000
     },
     
     {
-        "item": "Jugo natural",
+        "item": "Jugo natural ",
         "precio": 700
     }
 ]}

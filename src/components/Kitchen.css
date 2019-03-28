@@ -25,3 +25,23 @@ h4 {
 .buttonKitchen {
     margin: 1.5%
 }
+
+.order {
+    text-align: center
+}
+
+.itemOrder {
+    display: flex;
+    float: left;
+}
+
+.totalOrder {
+    background-color: rgb(190, 184, 184);
+    width: 30%;
+    margin: 1.5%;
+    border: 2px solid gray;
+    display: flex;
+    float: right;
+}
+
+
