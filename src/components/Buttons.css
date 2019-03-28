@@ -1,8 +1,8 @@
 .button{
     color: black;
     text-align: center;
-    display: block;
     padding: 1%;
     border-radius: 10px;
-    margin: 1%
+    margin: 3%;
+    width: 100%;
 }

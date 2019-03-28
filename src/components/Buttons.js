@@ -12,13 +12,11 @@ class Buttons extends Component {
     render() {
         const menu = this.state.menu.map((item) => {
             return (
-                <div className="container">
-                    <div className="row">
-                        <button className="col-md-2 button">
-                            {item.item}
-                            <div>{item.precio}</div>
-                        </button>
-                    </div>
+                <div>
+                    <button className="button">
+                        {item.item}
+                        <div>{item.precio}</div>
+                    </button>
                 </div>
             )
         })

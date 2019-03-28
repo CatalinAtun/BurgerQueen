@@ -27,8 +27,9 @@ body {
     );
 }
 
-.containerLeft {
+.divButton{
+    display: flex;
     float: left;
-    width: 100%;
+    width: 50%;
 }
 
