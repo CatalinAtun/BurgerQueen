@@ -4,6 +4,7 @@
   "homepage": "https://burger-queen-34357.firebaseapp.com/",
   "private": true,
   "dependencies": {
+    "firebase": "^5.9.1",
     "gh-pages": "^2.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './CustomerName.css'
+import { database } from '../provider.js';
 
 class CustomerName extends Component {
     constructor() {
@@ -18,6 +19,10 @@ class CustomerName extends Component {
             name: this.state.tempName,
             tempName: ""
         })
+        let newName = database.ref().push().key; 
+        let updates = {};
+        updates[newName] = this.state.name;
+        return database.ref().update(updates);
     }
 
     temporalName(event) {
