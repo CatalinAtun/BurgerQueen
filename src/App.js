@@ -9,7 +9,8 @@ class App extends Component {
     super();
     this.state =
     {
-      menuApp: []
+      menuApp: [],
+      total: 0,
     }
 
     this.addItemsToArr = this.addItemsToArr.bind(this);
@@ -17,20 +18,26 @@ class App extends Component {
   }
 
   addItemsToArr(e){
-    let menu = this.state.menuApp
-    menu.push(e)
+    let menu = this.state.menuApp;
+    let newTotal = this.state.total;
+    newTotal = newTotal + e.precio;
+    menu.push(e);
     this.setState({
       ...this.state, 
-      menuApp: menu
+      menuApp: menu,
+      total: newTotal,
     })
   }
 
   deleteKitchenItems(order){
+    let newTotal = this.state.total;
+    newTotal = newTotal - order.precio;
     this.setState({
       ...this.state,
       menuApp: this.state.menuApp.filter((element)=>{
         return element !== order
-      })
+      }),
+      total: newTotal,
     })
   }
 
@@ -44,7 +51,9 @@ class App extends Component {
         sendItemsToArr={this.addItemsToArr}
         />
         </div>
-        <Kitchen sendItemsToArrToKitchen={this.state.menuApp} deleteItem={this.deleteKitchenItems}/>
+        <Kitchen sendItemsToArrToKitchen={this.state.menuApp} deleteItem={this.deleteKitchenItems}
+        total={this.state.total}
+        />
       </div>
     );
   }

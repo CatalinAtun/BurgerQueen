@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import "./Kitchen.css"
 
+
 class Kitchen extends Component {
     constructor(props){
         super(props)
+        this.state={
+            total :0
+        }
     }
     showOrder() {
         const showOrderConst = this.props.sendItemsToArrToKitchen.map((item) =>{
@@ -23,12 +27,14 @@ class Kitchen extends Component {
     }
 
 
+
+
     render() {
         return (
             <div className="kitchen">
                 <nav className="navOrder"><h4>Pedidos</h4></nav>
                 <nav className="navFood">{this.showOrder()}</nav>
-                <nav className="totalOrder">Total:</nav>
+                <nav className="totalOrder">Total: {this.props.total}</nav>
                 <button className="buttonKitchen" onClick={this.sendToKitchen}>Enviar a cocina</button>
             </div>
         );
