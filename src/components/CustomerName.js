@@ -6,7 +6,7 @@ class CustomerName extends Component {
     constructor() {
         super();
         this.state = {
-            name: "______",
+            name: "",
             tempName: ""
         }
 

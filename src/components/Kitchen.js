@@ -10,12 +10,18 @@ class Kitchen extends Component {
             return (
                 <div className="order">
                 <div className="itemOrder">{item.item}</div>
-                <div>{item.precio}</div>
+                {item.precio}
+                <button onClick={()=>this.props.deleteItem(item)}>X</button>
                 </div> 
             ) 
         })
         return showOrderConst
     }
+
+    sendToKitchen() {
+        console.log("Pedido enviado a cocina")
+    }
+
 
     render() {
         return (
@@ -23,7 +29,7 @@ class Kitchen extends Component {
                 <nav className="navOrder"><h4>Pedidos</h4></nav>
                 <nav className="navFood">{this.showOrder()}</nav>
                 <nav className="totalOrder">Total:</nav>
-                <button className="buttonKitchen">Enviar a cocina</button>
+                <button className="buttonKitchen" onClick={this.sendToKitchen}>Enviar a cocina</button>
             </div>
         );
     }

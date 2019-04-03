@@ -13,6 +13,7 @@ class App extends Component {
     }
 
     this.addItemsToArr = this.addItemsToArr.bind(this);
+    this.deleteKitchenItems = this.deleteKitchenItems.bind(this);
   }
 
   addItemsToArr(e){
@@ -21,6 +22,15 @@ class App extends Component {
     this.setState({
       ...this.state, 
       menuApp: menu
+    })
+  }
+
+  deleteKitchenItems(order){
+    this.setState({
+      ...this.state,
+      menuApp: this.state.menuApp.filter((element)=>{
+        return element !== order
+      })
     })
   }
 
@@ -34,7 +44,7 @@ class App extends Component {
         sendItemsToArr={this.addItemsToArr}
         />
         </div>
-        <Kitchen sendItemsToArrToKitchen={this.state.menuApp} />
+        <Kitchen sendItemsToArrToKitchen={this.state.menuApp} deleteItem={this.deleteKitchenItems}/>
       </div>
     );
   }
