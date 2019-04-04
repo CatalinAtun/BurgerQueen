@@ -6,3 +6,13 @@
     margin: 3%;
     width: 100%;
 }
+
+.menu {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.lunch {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}

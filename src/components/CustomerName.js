@@ -37,7 +37,7 @@ class CustomerName extends Component {
                 <p>Ingrese nombre del cliente</p>
                 <input onChange={this.temporalName} value={this.state.tempName}></input>
                 <button onClick={this.onChange}>ENVIAR</button>
-                <p>Cliente atendiendo: {this.state.name}</p>
+                <p>Atendiendo a: {this.state.name}</p>
             </div>
         )
     }
